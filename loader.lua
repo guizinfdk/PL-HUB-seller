@@ -3,7 +3,7 @@
     Ordem: Tela de Carregamento → Verificação de Key → Painel Principal
 ]]
 
-local BASE = "https://raw.githubusercontent.com/guizinfdk/PL-HUB-seller/refs/heads/main/"
+local BASE = "https://raw.githubusercontent.com/guizinfdk/PL-HUBv4.5/refs/heads/main/"
 
 -- 1. TELA DE CARREGAMENTO
 local ok1, err1 = pcall(function()
