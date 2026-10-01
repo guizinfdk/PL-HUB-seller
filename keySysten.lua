@@ -207,14 +207,6 @@ local autorizado = false
 local encerrado = false
 local tentativa = 0
 
---// ============================================
---// COLE SEU SCRIPT PRINCIPAL AQUI (dentro desta função)
---// ============================================
-local function iniciarSeuScript()
-    -- APAGUE ESTE PRINT E COLE SEU SCRIPT AQUI:
-    print("[KeyPanel] Acesso autorizado! Execute seu painel aqui.")
-end
-
 local function mensagem(texto, erro)
     if encerrado then return end
 
@@ -350,11 +342,8 @@ local function verificarKey()
             autorizado = true
             screenGui:Destroy()
 
-            local iniciou, erro = pcall(iniciarSeuScript)
-
-            if not iniciou then
-                warn("[KeyPanel] Key aceita, mas o painel principal falhou: " .. tostring(erro))
-            end
+            -- 🔑 AVISA O LOADER QUE PODE ABRIR O PAINEL
+            _G.PL_HUB_KEY_OK = true
 
             return
         end
